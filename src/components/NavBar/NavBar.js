@@ -10,7 +10,7 @@ function NavBar() {
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+        <Navbar.Brand href="#">Home</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -18,20 +18,17 @@ function NavBar() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <NavDropdown title="Link" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Productos</NavDropdown.Item>
+            <NavDropdown title="Productos" id="navbarScrollingDropdown">
+              <NavDropdown.Item href="#action3">Sweater</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
-                Another action
+                Remeras
               </NavDropdown.Item>
-              <NavDropdown.Divider />
               <NavDropdown.Item href="#action5">
-                Something else here
+                Vestidos
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#" disabled>
-              Link
-            </Nav.Link>
+            <Nav.Link href="#action1">Contacto</Nav.Link>
+            <Nav.Link href="#action5">Preguntas Frecuentes</Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control
