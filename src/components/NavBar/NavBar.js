@@ -6,10 +6,10 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-function NavBar() {
+function NavBar() { 
   return (
     <div>
-    <img  src="/assets/mitiendalomaslogo.png" />
+    <img  src="/assets/mitiendalomaslogo.png" alt="logo"/>
     <h1> Mi Tienda Lomas</h1>
     <Navbar bg="light" expand="lg">
       <Container fluid>
@@ -45,7 +45,7 @@ function NavBar() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-    </div>
+    </div> 
   );
 }
 
