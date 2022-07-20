@@ -8,6 +8,9 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function NavBar() {
   return (
+    <div>
+    <img  src="/assets/mitiendalomaslogo.png" />
+    <h1> Mi Tienda Lomas</h1>
     <Navbar bg="light" expand="lg">
       <Container fluid>
         <Navbar.Brand href="#">Home</Navbar.Brand>
@@ -42,6 +45,7 @@ function NavBar() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    </div>
   );
 }
 

@@ -1,0 +1,17 @@
+
+.item-product {
+    display: flex;
+    float:left;
+    width: 33,33%;
+    height: 33,33%;
+    margin: 15px;
+    flex-direction: column;
+    img {
+        width: 100%;
+    }
+    button {
+       background-color:gray;
+       border: gray;
+    }
+
+}
