@@ -1,5 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import './ItemProduct.scss';
 
 const ItemProduct = (props) => { 
     console.log ("propiedades", props.price, props.title, props.image)
