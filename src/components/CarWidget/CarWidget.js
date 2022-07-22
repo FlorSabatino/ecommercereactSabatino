@@ -1,4 +1,3 @@
-import CarWidget from './CarWidget/CarWidget';
 import './CarWidget.scss'
 
 
