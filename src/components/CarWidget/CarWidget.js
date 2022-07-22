@@ -1,4 +1,6 @@
-import CarWidget from '../CarWidget/CarWidget';
+import CarWidget from './CarWidget/CarWidget';
+import './CarWidget.scss'
+
 
 
 function CarWidget () {
