@@ -1,18 +1,38 @@
 
 .item-product {
     display: flex;
+    flex-direction: column;
     float:left;
     width: 33,33%;
     height: 33,33%;
     margin: 15px;
-    flex-direction: column;
+
         img {
         width: 250px;
         height: 250px;
     }
-    button {
-       background-color:gray;
-       border: gray;
+  
+}
+
+.BotonAgregar {
+    background-color:gray;
+    border: gray;
+ }
+
+ .ItemCount {
+    display: flex;
+    justify-content: center;
+    p {
+        font-size: 20px;
     }
 
-}
+    button {
+        width: 12%;
+        height: 30px;
+        border-radius: 5px;
+        padding: 8px;
+        font-size: 15px;
+        
+    }
+
+ }
