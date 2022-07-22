@@ -1,4 +1,4 @@
-import './CarWidget'
+import CarWidget from '../CarWidget/CarWidget';
 
 
 function CarWidget () {
