@@ -1,40 +1,30 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './ItemProduct.scss';
-import { useState } from 'react';
+import ItemCount from '../ItemCount/ItemCount';
 
 
-const ItemProduct = (props) => { 
-  const   [sumarYrestar, setsumarYrestar] = useState (1)
-
-  const addNumber = () => {
-    setsumarYrestar (sumarYrestar+1)
-    
-  }
-  const restarProducto = () => {
-    setsumarYrestar (sumarYrestar-1)
-  }
-
+const ItemProduct = ({data, action}) => {
+  const {title,imagen,price,stock} =data
   return (
     <div className='item-product'>
     <Card  style={{ width: '18rem' }}>
-      <Card.Img variant="top" src= {props.image} />
+      <Card.Img variant="top" src= {imagen} />
       <Card.Body >
-        <Card.Title>$ {props.price}</Card.Title>
+        <Card.Title>$ {price}</Card.Title>
         <Card.Text>
-          {props.title}
+          {title}
         </Card.Text>
-        <div className='ItemCount'>
-        <button onClick={restarProducto}>-</button>
-        <p>{sumarYrestar}</p>
-        <button onClick={addNumber}>+</button>
-        </div>
-                <Button className="BotonAgregar"variant="primary">Agregar al carrito</Button>
+        <ItemCount/>
+        <Card.Text>
+          Cantidad disponible: {stock}
+        </Card.Text>
+                <Button onClick={action} className="BotonAgregar"variant="primary">Agregar al carrito</Button>
       </Card.Body>
     </Card>
 
     </div>
   );
-}
+  }
 
 export default ItemProduct;

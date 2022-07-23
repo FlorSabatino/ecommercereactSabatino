@@ -45,8 +45,9 @@ function NavBar() {
           </Form>
         </Navbar.Collapse>
         </Container>
+        <CarWidget />
       </Navbar>
-      <CarWidget />
+
     </div> 
   );
 }
