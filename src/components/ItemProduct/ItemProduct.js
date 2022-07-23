@@ -15,7 +15,7 @@ const ItemProduct = ({data, action}) => {
         <Card.Text>
           {title}
         </Card.Text>
-        <ItemCount/>
+        <ItemCount cantidad={stock}/>
         <Card.Text>
           Cantidad disponible: {stock}
         </Card.Text>
