@@ -1,15 +1,15 @@
 import './ItemDetail.scss'
 
-const ItemDetail = () => {
+const ItemDetail = ({data}) => {
     return (
         <>
         <div className="item-detail-image">
-            <img src="/assets/img_0302i.png" alt="sweater verde militar"/>
+            <img src={`/assets/${data.imagen}`} alt="sweater verde militar"/>
         </div>
         <div className="item-detail-info">
             <span className="categoria">Mujer - Sweater</span>
-            <h3>Sweater manga ancha</h3>
-            <p className="detail-info-precio"> $ 3000</p>
+            <h3>{data.title}</h3>
+            <p className="detail-info-precio"> $ {data.price}</p>
             <div className="detail-info-color">
                 <button>Verde Militar</button> / <button>Manteca</button>
             </div>

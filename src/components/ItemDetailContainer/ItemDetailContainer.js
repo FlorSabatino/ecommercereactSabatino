@@ -1,25 +1,30 @@
 import ItemDetail from "../ItemDetail/ItemDetail"
 import Item from "../Item/Item"
-import {useEffect } from "react"
+import {useEffect, useState } from "react"
 import producto from "../Item/Item"
 import { useParams, UseParams } from "react-router-dom"
 
 const ItemDetailContainer = () => {
-    console.log("productos desde detalle: ",producto)
-    console.log("useParams:", useParams())
+    const [productoData, setProductoData] = useState ({})
     const {id}= useParams()
-    console.log("id de parametros", id)
+
     useEffect(()=>{
+        filterById()
+
+}, [])
+
+    const filterById = () => {
         producto.some( (producto)=> {
-            if(producto.id === 2){
-                return producto
+            if(producto.id == id){
+                setProductoData(producto)
+
             }
         }
         )
-}, [])
+    }
     return (
         <div className="container-item-detail">
-            <ItemDetail />
+            <ItemDetail data={productoData}/>
         </div>
     )
 
