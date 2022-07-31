@@ -1,4 +1,3 @@
-import ItemProduct from "../ItemProduct/ItemProduct"
 import producto from "../Item/Item"
 import { useEffect, useState } from "react"
 import ItemList from "../ItemList/ItemList"

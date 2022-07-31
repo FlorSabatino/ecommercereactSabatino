@@ -14,7 +14,7 @@ function NavBar() {
     <h1> Mi Tienda Lomas</h1>
     <Navbar bg="light" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#">Home</Navbar.Brand>
+        <Navbar.Brand href="/">Home</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -31,7 +31,7 @@ function NavBar() {
                 Vestidos
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#action1">Contacto</Nav.Link>
+            <Nav.Link href="/Contacto">Contacto</Nav.Link>
             <Nav.Link href="#action5">Preguntas Frecuentes</Nav.Link>
           </Nav>
           <Form className="d-flex">

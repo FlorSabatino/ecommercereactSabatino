@@ -1,0 +1,12 @@
+.item-detail-image {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 500px;
+}
+
+.item-detail-info {
+    display: flex;
+    flex-direction: column;
+    float: right;
+}
