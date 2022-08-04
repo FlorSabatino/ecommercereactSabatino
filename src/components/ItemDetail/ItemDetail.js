@@ -4,7 +4,7 @@ const ItemDetail = ({data}) => {
     return (
         <>
         <div className="item-detail-image">
-            <img src={`/assets/${data.imagen}`} alt="sweater verde militar"/>
+            <img src={`${data.imagen}`} alt="sweater verde militar"/>
         </div>
         <div className="item-detail-info">
             <span className="categoria">Mujer - Sweater</span>

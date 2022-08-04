@@ -9,7 +9,9 @@ import Contacto from './pages/Contacto';
 import Productos from './pages/Productos';
 import Detail from './pages/Detalle';
 
-function App() {
+function App() 
+
+{
   return (
     <BrowserRouter>
 
@@ -18,6 +20,9 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/contacto" element={ <Contacto />}/>
         <Route path="/productos" element={<Productos/>}/>
+        <Route path="/category/sweater" element={<Productos/>}/>
+        <Route path="/category/remeras" element={<Productos/>}/>
+        <Route path="/category/vestidos" element={<Productos/>}/>
         <Route path="*" element={<h3>Error 404 - Pagina no encontrada</h3>}/>
         <Route path="/productos/:id" element={<Detail/>} />
       </Routes>

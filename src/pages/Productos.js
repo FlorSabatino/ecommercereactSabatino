@@ -5,4 +5,5 @@ const PaginaProductos = () => {
     )
 }
 
+
 export default PaginaProductos

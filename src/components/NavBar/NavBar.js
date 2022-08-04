@@ -6,12 +6,19 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import './NavBar.scss'
 import CarWidget from '../CarWidget/CarWidget';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 function NavBar() { 
   return (
-    <div>
-    <img  src="/assets/mitiendalomaslogo.png" alt="logo"/>
-    <h1> Mi Tienda Lomas</h1>
+<div> 
+  <Link to="/"
+    <img src="/assets/mitiendalomaslogo.png" alt="logo" />
+    </Link>
+ <h1> Mi Tienda Lomas</h1>
+    
+  
+    
     <Navbar bg="light" expand="lg">
       <Container fluid>
         <Navbar.Brand href="/">Home</Navbar.Brand>
@@ -22,12 +29,12 @@ function NavBar() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <NavDropdown title="Productos" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Sweater</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
+            <NavDropdown href="/" title="Productos" id="navbarScrollingDropdown">
+              <NavDropdown.Item href="/category/sweater">Sweater</NavDropdown.Item>
+              <NavDropdown.Item href="/category/categoryName">
                 Remeras
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action5">
+              <NavDropdown.Item href="/category/categoryName">
                 Vestidos
               </NavDropdown.Item>
             </NavDropdown>

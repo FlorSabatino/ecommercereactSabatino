@@ -1,12 +1,29 @@
 .item-detail-image {
     display: flex;
+    float: left;
     flex-direction: column;
     height: 500px;
     width: 500px;
 }
 
-.item-detail-info {
-    display: flex;
-    flex-direction: column;
+
+.itemCount {
     float: right;
+    width: 100%;
+    margin: 50px;
+    
+}
+
+.item-detail-info button {
+background:gray;
+font-size: 15px;
+width: 50px;
+border: 1px solid rgb(58, 57, 57);
+border-radius: 5px;
+display: inline-flex;
+color: white;
+}
+
+.item-detail-info span {
+    font-size: 25px;
 }
