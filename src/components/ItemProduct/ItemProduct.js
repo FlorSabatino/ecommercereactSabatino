@@ -9,22 +9,24 @@ const ItemProduct = ({data, action}) => {
   const {id,title,imagen,price,stock} =data
   return (
     <div className='item-product'>
-    <Link to={`/productos/${id}`}>
+    
      <Card  style={{ width: '18rem' }}>
-      <Card.Img variant="top" src= {imagen} />
       <Card.Body >
+      <Link to={`/productos/${id}`}>
+      <Card.Img variant="top" src= {imagen} />
         <Card.Title>$ {price}</Card.Title>
         <Card.Text>
           {title}
         </Card.Text>
+        </Link>
         <ItemCount cantidad={stock}/> 
         <Card.Text>
           Cantidad disponible: {stock}
         </Card.Text>
                 <Button onClick={action} className="BotonAgregar"variant="primary">Agregar al carrito</Button>
-      </Card.Body>
+      </Card.Body>  
     </Card>
-    </Link>
+    
     </div>
     
   );

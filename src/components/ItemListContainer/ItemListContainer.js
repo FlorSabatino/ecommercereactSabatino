@@ -1,5 +1,5 @@
 import producto from "../Item/Item"
-import { useEffect, useState } from "react"
+import { useEffect, useState, useParams } from "react"
 import ItemList from "../ItemList/ItemList"
 
 
@@ -7,9 +7,18 @@ const ItemListContainer = ({section}) => {
 
 
         const [listaProducto, setlistaProducto] = useState ([])
+        const {idCategory} = useParams ();
         const getProducto = new Promise (( resolve, reject) => {
             setTimeout (() => {
-                resolve (producto)
+                if(idCategory){
+                    resolve (producto.filter((prod) =>{
+                        return prod.categoria === idCategory
+
+                    }))
+                }
+               else {
+                resolve(producto)
+            }
             },2000)
             
             })
@@ -27,7 +36,7 @@ const ItemListContainer = ({section}) => {
     
                 })
             
-            }, [])
+            }, [idCategory])
 
 
 

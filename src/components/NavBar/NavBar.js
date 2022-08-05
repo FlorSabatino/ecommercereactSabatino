@@ -6,13 +6,12 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import './NavBar.scss'
 import CarWidget from '../CarWidget/CarWidget';
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import {Link} from 'react-router-dom'
 
 function NavBar() { 
   return (
 <div> 
-  <Link to="/"
+  <Link to="/">
     <img src="/assets/mitiendalomaslogo.png" alt="logo" />
     </Link>
  <h1> Mi Tienda Lomas</h1>
@@ -31,10 +30,10 @@ function NavBar() {
           >
             <NavDropdown href="/" title="Productos" id="navbarScrollingDropdown">
               <NavDropdown.Item href="/category/sweater">Sweater</NavDropdown.Item>
-              <NavDropdown.Item href="/category/categoryName">
+              <NavDropdown.Item href="/category/remera">
                 Remeras
               </NavDropdown.Item>
-              <NavDropdown.Item href="/category/categoryName">
+              <NavDropdown.Item href="/category/vestido">
                 Vestidos
               </NavDropdown.Item>
             </NavDropdown>

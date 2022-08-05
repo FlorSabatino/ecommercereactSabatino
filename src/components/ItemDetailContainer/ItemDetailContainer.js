@@ -1,8 +1,7 @@
 import ItemDetail from "../ItemDetail/ItemDetail"
-import Item from "../Item/Item"
 import {useEffect, useState } from "react"
 import producto from "../Item/Item"
-import { useParams, UseParams } from "react-router-dom"
+import { useParams} from "react-router-dom"
 
 const ItemDetailContainer = () => {
     const [productoData, setProductoData] = useState ({})
@@ -15,7 +14,7 @@ const ItemDetailContainer = () => {
 
     const filterById = () => {
         producto.some( (producto)=> {
-            if(producto.id == id){
+            if(producto.id === id){
                 setProductoData(producto)
 
             }
