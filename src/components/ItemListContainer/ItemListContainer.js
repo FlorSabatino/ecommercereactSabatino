@@ -1,6 +1,7 @@
 import producto from "../Item/Item"
-import { useEffect, useState, useParams } from "react"
+import { useEffect, useState } from "react"
 import ItemList from "../ItemList/ItemList"
+import { useParams } from "react-router-dom"
 
 
 const ItemListContainer = ({section}) => {
@@ -19,7 +20,7 @@ const ItemListContainer = ({section}) => {
                else {
                 resolve(producto)
             }
-            },2000)
+            },1000)
             
             })
             useEffect(() =>{
