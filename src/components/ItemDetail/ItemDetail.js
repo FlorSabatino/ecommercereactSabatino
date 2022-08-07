@@ -1,8 +1,12 @@
 import './ItemDetail.scss'
 import ItemCount from '../ItemCount/ItemCount'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+
 
 
 const ItemDetail = ({data}) => {
+  const [cantidadSeleccionada, setcantidadSeleccionada] = useState (1)
     const {id,title,imagen,price,stock} =data
     return (
         <>
@@ -11,6 +15,7 @@ const ItemDetail = ({data}) => {
         </div>
         <div className="item-detail-info">
             <span className="categoria">Mujer - Sweater</span>
+            <h5 class="card-title">{data.title}</h5>
             <p className="detail-info-precio"> $ {data.price}</p>
             <div className="detail-info-color">
                 <button>Verde Militar</button> / <button>Manteca</button>
@@ -20,23 +25,14 @@ const ItemDetail = ({data}) => {
                 <button>S</button>
                 <button>M</button>
             </div>
-          <ItemCount cantidad={stock}/> 
-            <button>Añadir al Carrito</button>
+            {console.log("cantidadSeleccionada: ", cantidadSeleccionada )}
+            {
+              cantidadSeleccionada < 1 ? <button><Link to="/cart">Terminar compra</Link></button> : <ItemCount setcantidadSeleccionada={setcantidadSeleccionada}/> 
+            }
+          
+          
+            <p class="card-text"><small class="text-muted">Cantidad disponible: {stock}</small></p>
         </div>
-        <div class="card mb-3" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="..." class="img-fluid rounded-start" alt="..."/>
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">{data.title}</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Cantidad disponible: {stock}</small></p>
-      </div>
-    </div>
-  </div>
-</div>
         </>
     );
 }

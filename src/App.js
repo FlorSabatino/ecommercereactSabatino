@@ -7,7 +7,7 @@ import Home from './pages/Home';
 import Contacto from './pages/Contacto';
 import Productos from './pages/Productos';
 import Detail from './pages/Detalle';
-
+import Checkout from './pages/Checkout';
 function App() 
 
 {
@@ -22,6 +22,7 @@ function App()
         <Route path="/category/:idCategory" element={<Productos/>}/>
         <Route path="*" element={<h3>Error 404 - Pagina no encontrada</h3>}/>
         <Route path="/productos/:id" element={<Detail/>} />
+        <Route path='/cart' element={<Checkout/>}/>
       </Routes>
       <div className='main-container'>
 
