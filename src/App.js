@@ -8,10 +8,12 @@ import Contacto from './pages/Contacto';
 import Productos from './pages/Productos';
 import Detail from './pages/Detalle';
 import Checkout from './pages/Checkout';
+import CartProvider from './context/CartContext';
 function App() 
 
 {
   return (
+    <CartProvider>
     <BrowserRouter>
 
       <NavBar />
@@ -31,6 +33,7 @@ function App()
       
       </div>
       </BrowserRouter>
+      </CartProvider>
       );
 }
 
