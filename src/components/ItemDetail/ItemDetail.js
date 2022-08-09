@@ -17,9 +17,8 @@ const ItemDetail = ({data}) => {
             <span className="categoria">Mujer - Sweater</span>
             <h5 className="card-title">{data.title}</h5>
             <p className="detail-info-precio"> $ {data.price}</p>
-            <div className="detail-info-color">
                 <button>Verde Militar</button> / <button>Manteca</button>
-            </div>
+
             <span>Talles</span>
             <div className="datail-info-talles">
                 <button>S</button>
@@ -27,11 +26,12 @@ const ItemDetail = ({data}) => {
             </div>
             {console.log("cantidadSeleccionada: ", cantidadSeleccionada )}
             {
-              cantidadSeleccionada < 1 ? <button><Link to="/cart">Terminar compra</Link></button> : <ItemCount cantidadSeleccionada={setcantidadSeleccionada}/> 
+                cantidadSeleccionada > 1 ? <button>Terminar compra</button> : <ItemCount cantidadSeleccionada={setcantidadSeleccionada}/> 
             }
+               
           
           
-            <p className="cardText"><small className="textMmuted">Cantidad disponible: {stock}</small></p>
+            <p>Cantidad disponible: {stock}</p>
         </div>
         </>
     );
