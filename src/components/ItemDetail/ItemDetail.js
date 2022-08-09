@@ -15,7 +15,7 @@ const ItemDetail = ({data}) => {
         </div>
         <div className="item-detail-info">
             <span className="categoria">Mujer - Sweater</span>
-            <h5 class="card-title">{data.title}</h5>
+            <h5 className="card-title">{data.title}</h5>
             <p className="detail-info-precio"> $ {data.price}</p>
             <div className="detail-info-color">
                 <button>Verde Militar</button> / <button>Manteca</button>
