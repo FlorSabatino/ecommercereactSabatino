@@ -9,6 +9,7 @@ import Productos from './pages/Productos';
 import Detail from './pages/Detalle';
 import Checkout from './pages/Checkout';
 import CartProvider from './context/CartContext';
+
 function App() 
 
 {

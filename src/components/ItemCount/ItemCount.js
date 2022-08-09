@@ -2,16 +2,20 @@ import { useState} from 'react'
 import './ItemCount.scss'
 
 
-const ItemCount = ({cantidadSeleccionada}) => { 
+const ItemCount = ({cantidadSeleccionada, stock}) => { 
 const   [sumarYrestar, setsumarYrestar] = useState (1)
 
 const addNumber = () => {
+  if(sumarYrestar < stock ) {
     setsumarYrestar (sumarYrestar+1)
     
   }
+  }
+ 
   const restarProducto = () => {
+    if (sumarYrestar > 1){
     setsumarYrestar (sumarYrestar-1)
-
+    }
   }
 
 const onAdd = () => {
