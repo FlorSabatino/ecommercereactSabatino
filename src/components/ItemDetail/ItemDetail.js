@@ -6,17 +6,17 @@ import { Link } from 'react-router-dom'
 
 
 const ItemDetail = ({data}) => {
-  const [cantidadSeleccionada, setcantidadSeleccionada] = useState (1)
+  const [cantidadSeleccionada, setcantidadSeleccionada] = useState (0)
     const {id,title,imagen,price,stock} =data
     return (
         <>
         <div className="item-detail-image">
-            <img src={`${data.imagen}`} alt="sweater verde militar"/>
+            <img src={`${imagen}`} alt="sweater verde militar"/>
         </div>
         <div className="item-detail-info">
             <span className="categoria">Mujer - Sweater</span>
-            <h5 className="card-title">{data.title}</h5>
-            <p className="detail-info-precio"> $ {data.price}</p>
+            <h5 className="card-title">{title}</h5>
+            <p className="detail-info-precio"> $ {price}</p>
                 <button>Verde Militar</button> / <button>Manteca</button>
 
             <span>Talles</span>
@@ -26,7 +26,7 @@ const ItemDetail = ({data}) => {
             </div>
             {console.log("cantidadSeleccionada: ", cantidadSeleccionada )}
             {
-                cantidadSeleccionada > 1 ? <Link to="/cart"><button>Terminar compra</button></Link> : <ItemCount stock={stock} cantidadSeleccionada={setcantidadSeleccionada}/> 
+                cantidadSeleccionada > 0 ? <Link to="/cart"><button>Terminar compra</button></Link> : <ItemCount stock={stock} cantidadSeleccionada={setcantidadSeleccionada}/> 
             }
                
           

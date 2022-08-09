@@ -30,7 +30,6 @@ const ItemListContainer = ({section}) => {
     
                 })
                 .catch ((error) =>{
-                    console.log ("la llamada fallo")
                 })
     
                 .finally (()=>{
