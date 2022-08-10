@@ -1,8 +1,10 @@
-import { useState} from 'react'
+import { useState, useContext} from 'react'
 import './ItemCount.scss'
+import { CartContext } from '../../context/CartContext'
 
 
-const ItemCount = ({cantidadSeleccionada, stock}) => { 
+const ItemCount = ({cantidadSeleccionada, stock, productData}) => { 
+  const{addProductToCart} = useContext (CartContext)
 const   [sumarYrestar, setsumarYrestar] = useState (1)
 
 const addNumber = () => {
@@ -19,6 +21,8 @@ const addNumber = () => {
   }
 
 const onAdd = () => {
+  console.log ("agregar al carrito: ", productData)
+  addProductToCart(productData)
 cantidadSeleccionada (sumarYrestar)
 
 }

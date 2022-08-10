@@ -1,20 +1,16 @@
-# Getting Started with Create React App
+# Mi Tienda Lomas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Emprendimiento de indumentaria
 
-## Available Scripts
+Una amiga inicio su emprendimiento de ropa, y estoy creando su web, para que pueda vender desde internet sus productos
 
-In the project directory, you can run:
+### `Librerias`
 
-### `npm start`
+Para el diseño utilice bootstrap, y los iconos preferi utilizar material ui. Cada uno fue por su facilidad en el uso y la estetica
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### `Lenguaje utilizado`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
+El proyecto esta codeado con React App
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.

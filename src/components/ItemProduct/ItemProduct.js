@@ -27,7 +27,7 @@ const ItemProduct = ({data, action}) => {
           {title}
         </Card.Text>
         </Link>
-        <Button onClick={addToCart} className="BotonAgregar"variant="primary">Agregar al carrito</Button>
+        <Button onClick={handleClick} className="BotonAgregar"variant="primary">Agregar al carrito</Button>
       </Card.Body>  
     </Card>
     

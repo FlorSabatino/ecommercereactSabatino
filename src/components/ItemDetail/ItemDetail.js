@@ -24,9 +24,8 @@ const ItemDetail = ({data}) => {
                 <button>S</button>
                 <button>M</button>
             </div>
-            {console.log("cantidadSeleccionada: ", cantidadSeleccionada )}
             {
-                cantidadSeleccionada > 0 ? <Link to="/cart"><button>Terminar compra</button></Link> : <ItemCount stock={stock} cantidadSeleccionada={setcantidadSeleccionada}/> 
+                cantidadSeleccionada > 0 ? <Link to="/cart"><button>Terminar compra</button></Link> : <ItemCount stock={stock} cantidadSeleccionada={setcantidadSeleccionada} productData={data}/> 
             }
                
           
