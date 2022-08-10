@@ -10,9 +10,14 @@ const CartProvider = ({children}) => {
     const addProductToCart = (product) =>{
         setCartProducts(cartProducts => [...cartProducts, product])
     }
+
+    const clear = () => {
+        setCartProducts([])
+    }
         const data ={
             cartProducts,
             setCartProducts,
+            clear,
             addProductToCart
         }
     

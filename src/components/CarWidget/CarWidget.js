@@ -8,7 +8,7 @@ import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 
 const CarWidget = () => { 
 
-    const {cartProducts} = useContext(CartContext)
+    const {cartProducts, clear} = useContext(CartContext)
     {console.log ("cartProducts desde widget:", cartProducts)}
     {cartProducts.map((product)=>{
         
@@ -36,7 +36,7 @@ const CarWidget = () => {
         </Dropdown.Menu>
       </Dropdown>
 
-
+<button onClick={() => clear ()} >Borrar Todo</button>
 </div>
     )
 }
