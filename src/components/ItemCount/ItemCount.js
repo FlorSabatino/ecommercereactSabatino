@@ -21,7 +21,7 @@ const addNumber = () => {
   }
 
 const onAdd = () => {
-  addProductToCart(productData)
+  addProductToCart({...productData, sumarYrestar})
 cantidadSeleccionada (sumarYrestar)
 
 }

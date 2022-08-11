@@ -28,7 +28,7 @@ function NavBar() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <NavDropdown as={Link} to="/" title="Productos" id="navbarScrollingDropdown">
+            <NavDropdown title="Productos" id="navbarScrollingDropdown">
               <NavDropdown.Item as={Link} to="/category/sweater">Sweater</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/category/remera">
                 Remeras

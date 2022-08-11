@@ -2,6 +2,7 @@
     width: 40px;
     height: 40px;
     border-radius: 10px;
+
     
     svg {
         width: 25px;
@@ -12,4 +13,9 @@
 
 .botonesDesplegable {
     background-color: lightgrey;
+}
+
+.DropDown-menu {
+display: flex;
+text-align: right;
 }
