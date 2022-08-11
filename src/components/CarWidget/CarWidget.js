@@ -26,20 +26,22 @@ const CarWidget = () => {
     <div className='item-cart-product' key={product.id}>
         <img style={{height: 70}} src={`${product.imagen}`} alt="" />
         <div className='cart-product-details'>
-            <p>{product.title}</p>         
+            <span>{product.title}</span>         
         </div>
         <div className='cart-product-details'>
-            <p>$ {product.price}</p>
-            <button onClick={() => restarProducto ()} >-</button>
+            <span>$ {product.price}</span>
+            <button className='botonesDesplegable'onClick={() => restarProducto ()} >-</button>
             <span>{sumarYrestar}</span>
-            <button onClick={() => addNumber ()} >+</button>
-            <button onClick={() => removeItem}> <DeleteIcon/></button>
+            <button className='botonesDesplegable'onClick={() => addNumber ()} >+</button>
+            <button className='botonesDesplegable'onClick={() => removeItem ()}> <DeleteIcon/></button>
         </div>
-        <button onClick={() => clear ()} ><DeleteForeverIcon/></button>
+        
     </div>
 )
             })}
+            <button className='botonesDesplegable' onClick={() => clear ()} ><DeleteForeverIcon/></button>
         </Dropdown.Menu>
+        
       </Dropdown>
 
 
