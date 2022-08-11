@@ -4,6 +4,7 @@ import './ItemProduct.scss';
 import {Link} from 'react-router-dom'
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
+import ItemCount from '../ItemCount/ItemCount';
 
 
 const ItemProduct = ({data, action}) => {
@@ -11,10 +12,6 @@ const ItemProduct = ({data, action}) => {
   
   const {id,title,imagen,price} =data
 
-  const addToCart = (e) => {
-    console.log("click Producto")
-    e.stopPropagation()
-}
   return (
     <div className='item-product'>
     

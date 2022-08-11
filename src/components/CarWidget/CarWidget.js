@@ -10,9 +10,8 @@ const CarWidget = () => {
 
     const {cartProducts, clear} = useContext(CartContext)
     {console.log ("cartProducts desde widget:", cartProducts)}
-    {cartProducts.map((product)=>{
-        
-    })}
+
+
     return (
         <div>
         <Dropdown>
@@ -21,22 +20,25 @@ const CarWidget = () => {
         </Dropdown.Toggle>
   
         <Dropdown.Menu>
-
+        {cartProducts.map((product)=>{
+            return (
     <div className='item-cart-product' key={product.id}>
-        <img src={`/assets/${product.image}`} alt="" />
+        <img style={{height: 50}} src={`${product.image}`} alt="" />
         <div className='cart-product-details'>
             <p>{product.title}</p>         
         </div>
         <div className='cart-product-details'>
             <p>$ {product.price}</p>
-            <DeleteForeverIcon/>
+            
+            <button onClick={() => clear ()} ><DeleteForeverIcon/></button>
         </div>
     </div>
 )
+            })}
         </Dropdown.Menu>
       </Dropdown>
 
-<button onClick={() => clear ()} >Borrar Todo</button>
+
 </div>
     )
 }
