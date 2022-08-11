@@ -23,7 +23,7 @@ const CarWidget = () => {
         {cartProducts.map((product)=>{
             return (
     <div className='item-cart-product' key={product.id}>
-        <img style={{height: 50}} src={`${product.image}`} alt="" />
+        <img style={{height: 50}} src={`${product.imagen}`} alt="" />
         <div className='cart-product-details'>
             <p>{product.title}</p>         
         </div>
