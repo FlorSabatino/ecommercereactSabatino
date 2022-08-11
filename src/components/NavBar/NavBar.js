@@ -20,7 +20,7 @@ function NavBar() {
     
     <Navbar bg="light" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="/">Home</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/">Home</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -28,17 +28,17 @@ function NavBar() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <NavDropdown href="/" title="Productos" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="/category/sweater">Sweater</NavDropdown.Item>
-              <NavDropdown.Item href="/category/remera">
+            <NavDropdown as={Link} to="/" title="Productos" id="navbarScrollingDropdown">
+              <NavDropdown.Item as={Link} to="/category/sweater">Sweater</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/category/remera">
                 Remeras
               </NavDropdown.Item>
               <NavDropdown.Item href="/category/vestido">
                 Vestidos
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="/Contacto">Contacto</Nav.Link>
-            <Nav.Link href="#action5">Preguntas Frecuentes</Nav.Link>
+            <Nav.Link as={Link} to="/Contacto">Contacto</Nav.Link>
+            <Nav.Link as={Link} to="#action5">Preguntas Frecuentes</Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control

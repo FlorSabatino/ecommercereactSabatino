@@ -21,7 +21,6 @@ const addNumber = () => {
   }
 
 const onAdd = () => {
-  console.log ("agregar al carrito: ", productData)
   addProductToCart(productData)
 cantidadSeleccionada (sumarYrestar)
 
