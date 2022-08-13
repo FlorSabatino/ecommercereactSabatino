@@ -13,6 +13,7 @@ const CarWidget = () => {
 
     return (
         <div>
+            <p>{cartProducts.lengh}</p>
         <Dropdown>
         <Dropdown.Toggle variant="success" id="dropdown-basic">
         <ShoppingCartIcon/>
