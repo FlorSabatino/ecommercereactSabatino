@@ -9,9 +9,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 
 const CarWidget = () => { 
 
-    const {cartProducts, clear, sumarYrestar, restarProducto, addNumber, removeItem} = useContext(CartContext)
-    {console.log ("cartProducts desde widget:", cartProducts)}
-
+    const {cartProducts, clear, restarProducto, addNumber, removeItem} = useContext(CartContext)
 
     return (
         <div>
@@ -31,9 +29,9 @@ const CarWidget = () => {
         <div className='cart-product-details'>
             <span>$ {product.price}</span>
             <button className='botonesDesplegable'onClick={() => restarProducto ()} >-</button>
-            <span>{sumarYrestar}</span>
+            <span>{product.sumarYrestar}</span>
             <button className='botonesDesplegable'onClick={() => addNumber ()} >+</button>
-            <button className='botonesDesplegable'onClick={() => removeItem ()}> <DeleteIcon/></button>
+            <button className='botonesDesplegable'onClick={() => removeItem (product.id)}> <DeleteIcon/></button>
         </div>
         
     </div>

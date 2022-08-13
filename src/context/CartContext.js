@@ -14,16 +14,21 @@ const CartProvider = ({children}) => {
     const clear = () => {
         setCartProducts([])
     }
+
+    const removeItem = (id) =>{
+        cartProducts.filter ((product) => product.id !== id)
+    }
         const data ={
             cartProducts,
             setCartProducts,
             clear,
-            addProductToCart
+            addProductToCart,
+            removeItem
         }
     
     
     return (
-        <CartContext.Provider value={data}>
+        <CartContext.Provider value={{data, removeItem, clear}}>
             {children}
         </CartContext.Provider>
     )
