@@ -13,16 +13,19 @@ const CarWidget = () => {
 
     return (
         <div>
-            <p>{cartProducts.lengh}</p>
-        <Dropdown>
+            
+        <Dropdown className='ocultarCarrito'>
+
         <Dropdown.Toggle variant="success" id="dropdown-basic">
+        {cartProducts.length !== 0 && <span>{cartProducts.length}</span>}
         <ShoppingCartIcon/>
         </Dropdown.Toggle>
-  
+        
         <Dropdown.Menu>
+            
         {cartProducts.map((product)=>{
             return (
-    <div className='item-cart-product' key={product.id}>
+    <div className='item-cart-product' key={product.id} >
         <img style={{height: 70}} src={`${product.imagen}`} alt="" />
         <div className='cart-product-details'>
             <span>{product.title}</span>         
