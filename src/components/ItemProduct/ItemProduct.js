@@ -4,7 +4,7 @@ import './ItemProduct.scss';
 import {Link} from 'react-router-dom'
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
-import ItemCount from '../ItemCount/ItemCount';
+
 
 
 const ItemProduct = ({data, action}) => {
