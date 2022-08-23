@@ -1,0 +1,36 @@
+
+.checkout-page {
+    width: 25%;
+    border-right: 1px solid #686868;
+    margin-right: 20px;
+}
+
+.total-purchase {
+    border: 1px solid #ccc;
+    padding: 22px 15px;
+    margin-top: 30px;
+}
+
+.total-purchase h3 {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.item-purchase {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.info-subtotal > button {
+    background: grey;
+    width: 100%;
+    padding: 10px 15px;
+    color: white;
+    text-align: left;
+    position: relative;
+    font-size: 18px;
+    cursor: pointer;
+
+}

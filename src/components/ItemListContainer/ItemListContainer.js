@@ -29,7 +29,11 @@ return productList
             useEffect(() =>{
                 getProducto ()
                 .then((res) => {
+                    if(idCategory){
+                    setlistaProducto (res.filter(p=>p.categoria == idCategory))
+                }else{
                     setlistaProducto (res)
+                }
                 })
 
             
