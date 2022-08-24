@@ -10,10 +10,28 @@ const CartProvider = ({children}) => {
     
 
     const addProductToCart = (product) =>{
-        let isInCart = cartProducts.find(cartItem => cartItem.id ===product.id)
-        if(!isInCart){
-            setTotalProducts(totalProducts + 1)
-            setTotalPrice (totalPrice + product.price)
+
+        const isInCart = cartProducts.find (
+            (productInCart) => productInCart.id == product.id
+        );
+        if(isInCart){
+            const newArray = cartProducts.map ((productInCart) => {
+                if (productInCart.id == product.id) {
+                    return{
+                    ...productInCart,
+                    sumarYrestar: productInCart.sumarYrestar + product.sumarYrestar,
+                };
+            }else{
+                return productInCart;
+            }
+            });
+            setCartProducts(newArray);
+        }
+        else {
+            setCartProducts (cartProducts => [...cartProducts, product])
+        }
+            setTotalProducts(totalProducts + 1);
+            setTotalPrice (totalPrice + product.price);
             return setCartProducts(cartProducts => [...cartProducts, product])
         }
         
@@ -24,7 +42,8 @@ const CartProvider = ({children}) => {
     }
 
     const removeItem = (id) =>{
-        cartProducts.filter ((product) => product.id !== id)
+       const newArray = cartProducts.filter ((product) => product.id !== id)
+       setCartProducts(newArray)
     }
         const data ={
             cartProducts,
@@ -38,11 +57,12 @@ const CartProvider = ({children}) => {
     
     
     return (
+
         <CartContext.Provider value={data}>
             {children}
         </CartContext.Provider>
+
     )
-}
 
 export default CartProvider
 
