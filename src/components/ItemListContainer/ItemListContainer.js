@@ -43,7 +43,6 @@ return productList
 
     return (
         <div className='ListaProductos'>
-                    <h3>Productos</h3>
                     <ItemList dataProducto={listaProducto}/>
         </div>
     )
