@@ -35,7 +35,6 @@ const CartProvider = ({children}) => {
             return setCartProducts(cartProducts => [...cartProducts, product])
         }
         
-    }
 
     const clear = () => {
         setCartProducts([])
@@ -63,6 +62,7 @@ const CartProvider = ({children}) => {
         </CartContext.Provider>
 
     )
+    }
 
 export default CartProvider
 

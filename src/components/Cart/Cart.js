@@ -3,11 +3,14 @@ import { CartContext } from '../../context/CartContext';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Modal from '../Modal/Modal';
 import './Cart.scss';
+import db from '../../firebaseConfig'
+import { collection, addDoc } from 'firebase/firestore';
 
 const Cart = () => {
     const [showModal, setShowModal] = useState(false)
 
     const { cartProducts, removeItem, totalPrice } = useContext(CartContext)
+    const [success, setSuccess] = useState ()
 
     const [order, setOrder] = useState({
         item: cartProducts.map((product)=> {
@@ -18,6 +21,7 @@ const Cart = () => {
             }
         }),
         buyer: {},
+        date: new Date ().toLocaleString (),
         total:totalPrice
     })
 
@@ -35,12 +39,30 @@ const Cart = () => {
         console.log(e.target.value)
         setFormData ({...formData, [e.target.name] : e.target.value})
     }
+
+    const submitData = () => {
+        e.preventDefault ()
+        pushData ({...order, buyer: formData})
+    }
+
+    const pushData = async (newOrder) => {
+        const collectioOrder = collection (db, 'ordenes')
+        const orderDoc = await addDoc (collectioOrder, newOrder)
+        setSuccess(orderDoc.id)
+
+    }
     return (
         <>
                             {
                         showModal &&
                             <Modal title="Datos de contacto" close={() => setShowModal()}>
-                                <form>
+                                {success ? (
+                                <>
+                                <h4>Tu pedido fue procesado correctamente</h4>
+                                <p>ID de Compra: {success}</p>
+                                </>
+                                ) : (
+                                <form onSubmit={submitData}>
                                     <input type='text' name='name' placeholder='Nombre' onChange={handleChange} value={formData.name}/>
                                     <p/>
                                     <input type='number' name='phone'placeholder='Telefono' onChange={handleChange} value={formData.phone}/>
@@ -53,8 +75,9 @@ const Cart = () => {
                                     <p/>
                                     <input type='text' name='cp' placeholder='Codigo Postal'onChange={handleChange} value={formData.cp}/>
                                     <p/>
-                                    <button>ENVIAR</button>
+                                    <button type='submit'>ENVIAR</button>
                                 </form>
+                                )}
                             </Modal>
                     }
                     <div className='cart-page'>
