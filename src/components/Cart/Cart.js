@@ -36,11 +36,10 @@ const Cart = () => {
    
 
     const handleChange = (e) => {
-        console.log(e.target.value)
         setFormData ({...formData, [e.target.name] : e.target.value})
     }
 
-    const submitData = () => {
+    const submitData = (e) => {
         e.preventDefault ()
         pushData ({...order, buyer: formData})
     }
@@ -63,17 +62,23 @@ const Cart = () => {
                                 </>
                                 ) : (
                                 <form onSubmit={submitData}>
+                                    <span>Nombre Completo: </span>
                                     <input type='text' name='name' placeholder='Nombre' onChange={handleChange} value={formData.name}/>
                                     <p/>
+                                    <span>Telefono: </span>
                                     <input type='number' name='phone'placeholder='Telefono' onChange={handleChange} value={formData.phone}/>
                                     <p/>
+                                    <span>Email: </span>
                                     <input type='email' name='email' placeholder='Mail'onChange={handleChange} value={formData.email}/>
                                     <p/>
+                                    <span>Direccion de envio: </span>
                                     <input type='text' name='adress' placeholder='Direccion'onChange={handleChange} value={formData.adress}/>
                                     <p/>
+                                    <span>Ciudad: </span>
                                     <input type='text' name='city' placeholder='Ciudad'onChange={handleChange} value={formData.city}/>
                                     <p/>
-                                    <input type='text' name='cp' placeholder='Codigo Postal'onChange={handleChange} value={formData.cp}/>
+                                    <span>Codigo Postal: </span>
+                                    <input type='number' name='cp' placeholder='Ingresa tu CP'onChange={handleChange} value={formData.cp}/>
                                     <p/>
                                     <button type='submit'>ENVIAR</button>
                                 </form>
