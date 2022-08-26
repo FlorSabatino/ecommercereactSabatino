@@ -7,7 +7,7 @@ import { CartContext } from '../../context/CartContext';
 
 
 
-const ItemProduct = ({data, action}) => {
+const ItemProduct = ({data}) => {
   const {handleClick} = useContext (CartContext)
   
   const {id,title,imagen,price} =data
