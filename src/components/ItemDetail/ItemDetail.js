@@ -17,12 +17,12 @@ const ItemDetail = ({data}) => {
             <span className="categoria">Mujer - Sweater</span>
             <h5 className="card-title">{title}</h5>
             <p className="detail-info-precio"> $ {price}</p>
-                <button>Verde Militar</button> / <button>Manteca</button>
+                <button className='botones'>Verde Militar</button> / <button className='botones'>Manteca</button>
 
-            <span>Talles</span>
-            <div className="datail-info-talles">
-                <button>S</button>
-                <button>M</button>
+            <p>Talles</p>
+            <div className="botones">
+                <button className='botones'>S</button>
+                <button className='botones'>M</button>
             </div>
             {
                 cantidadSeleccionada > 0 ? <Link to="/cart"><button>Terminar compra</button></Link> : <ItemCount stock={stock} cantidadSeleccionada={setcantidadSeleccionada} productData={data}/> 

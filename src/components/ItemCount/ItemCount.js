@@ -29,10 +29,10 @@ cantidadSeleccionada (sumarYrestar)
     
 
         <div className='ItemCount'>
-        <button onClick={restarProducto}>-</button>
-        <p>{sumarYrestar}</p>
-        <button onClick={addNumber}>+</button>
-        <button onClick={onAdd}>Añadir al Carrito</button>
+        <button className='botones' onClick={restarProducto}>-</button>
+        <p> {sumarYrestar} </p>
+        <button className='botones' onClick={addNumber}>+</button>
+        <button className='botones' onClick={onAdd}>Añadir al Carrito</button>
         </div>
 
         )
