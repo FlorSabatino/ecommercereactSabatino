@@ -12,7 +12,7 @@ const Cart = () => {
     const { cartProducts, removeItem, totalPrice } = useContext(CartContext)
     const [success, setSuccess] = useState ()
 
-    const [order, setOrder] = useState({
+    const [order] = useState({
         item: cartProducts.map((product)=> {
             return {
                 id: product.id,
@@ -57,6 +57,7 @@ const Cart = () => {
                             <Modal title="Datos de contacto" close={() => setShowModal()}>
                                 {success ? (
                                 <>
+                                <h3>Gracias por tu compra!!</h3>
                                 <h4>Tu pedido fue procesado correctamente</h4>
                                 <p>ID de Compra: {success}</p>
                                 </>

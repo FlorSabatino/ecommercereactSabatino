@@ -9,7 +9,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 
 const CarWidget = () => { 
 
-    const {cartProducts, clear, restarProducto, addNumber, removeItem} = useContext(CartContext)
+    const {cartProducts, clear, removeItem} = useContext(CartContext)
 
     return (
         <div>
@@ -29,19 +29,18 @@ const CarWidget = () => {
         <img style={{height: 70}} src={`${product.imagen}`} alt="" />
         <div className='cart-product-details'>
             <span>{product.title}</span>         
-        </div>
+        
         <div className='cart-product-details'>
-            <span>$ {product.price}</span>
-            <button className='botonesDesplegable'onClick={() => restarProducto ()} >-</button>
-            <span>{product.sumarYrestar}</span>
-            <button className='botonesDesplegable'onClick={() => addNumber ()} >+</button>
+            <span>$ {product.price} </span>
+            <p>Cantidad: {product.sumarYrestar}</p>
             <button className='botonesDesplegable'onClick={() => removeItem (product.id)}> <DeleteIcon/></button>
+            </div>
         </div>
         
     </div>
 )
             })}
-            <button className='botonesDesplegable' onClick={() => clear ()} ><DeleteForeverIcon/></button>
+            <button className='botonesDesplegable' onClick={() => clear ()} ><DeleteForeverIcon/>Vaciar carrito</button>
         </Dropdown.Menu>
         
       </Dropdown>

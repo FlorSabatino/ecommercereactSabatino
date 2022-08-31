@@ -38,7 +38,6 @@ function NavBar() {
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link as={Link} to="/Contacto">Contacto</Nav.Link>
-            <Nav.Link as={Link} to="#action5">Preguntas Frecuentes</Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control

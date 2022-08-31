@@ -12,3 +12,4 @@ Para el diseño utilice bootstrap, y los iconos preferi utilizar material ui. Ca
 
 El proyecto esta codeado con React App
 
+<img src="./public/assets/rec-screen-_1_.gif">
